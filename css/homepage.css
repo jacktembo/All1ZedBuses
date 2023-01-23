@@ -6,3 +6,12 @@
     display: flex;
     justify-content: center;
 }
+
+.card-img-top {
+    width: 90vw;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}

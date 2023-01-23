@@ -26,6 +26,5 @@ fetch('https://buses.pridezm.com/api/bus-companies', {
         `
         companyList.appendChild(item);
     });
-    // document.body.appendChild(list);
 })
 .catch(error => console.error(error))
