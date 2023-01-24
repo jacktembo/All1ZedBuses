@@ -19,7 +19,7 @@ fetch('https://buses.pridezm.com/api/bus-companies', {
         let item = document.createElement("div");
         item.id = element.id
         item.innerHTML = `
-        <a href="https://buses.pridezm.com/api/${element.id}/detail" class="company-link">
+        <a href="" class="company-link">
         <div class="company-card" style="flex: 1 1 50%;">
             <img src="${element.image}" alt="" class="top-img">
             <div class="company-name"> ${element.company_name} </div>
