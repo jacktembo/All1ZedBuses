@@ -1,6 +1,6 @@
 let token = 'b1136fb60f5b0484cac2827b8642b55b6f2e517a'
 let response;
-let companyList = document.querySelector('.company-list')
+let companyList = document.querySelector('.companies-cards')
 
 fetch('https://buses.pridezm.com/api/bus-companies', {
   method: 'GET',
@@ -8,23 +8,28 @@ fetch('https://buses.pridezm.com/api/bus-companies', {
     'Authorization': `Token ${token}`
   }
 })
-.then(res => res.json())
+.then(res => res.json())   
+
+
+
 .then(data => {
     response = data;
     console.log(response)
     response.forEach(element => {
         let item = document.createElement("div");
+        item.id = element.id
         item.innerHTML = `
-        <div class="col">
-              <div class="card h-100">
-                <img src="${element.image}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${element.company_name}</h5>
-                </div>
-              </div>
-            </div>
+        <a href="https://buses.pridezm.com/api/${element.id}/detail" class="company-link">
+        <div class="company-card" style="flex: 1 1 50%;">
+            <img src="${element.image}" alt="" class="top-img">
+            <div class="company-name"> ${element.company_name} </div>
+        </div>
+      </div>
+        </a>
+        
         `
         companyList.appendChild(item);
     });
 })
 .catch(error => console.error(error))
+
