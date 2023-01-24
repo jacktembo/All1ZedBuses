@@ -6,7 +6,6 @@ html, body {
 
 .banner-img {
     width: 95vw;
-    height: 400px;
 }
 .banner {
     display: flex;
@@ -43,4 +42,13 @@ html, body {
     border-end-start-radius: 1rem;
     background-color: #3279e4;
     color: white;
+}
+
+.choose-text {
+    text-align: center;
+    margin: 1rem;
+    color: dodgerblue;
+    font-weight: bold;
+    border: 1px solid dodgerblue;
+    padding: 0.5rem;
 }
