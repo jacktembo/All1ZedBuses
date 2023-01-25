@@ -49,3 +49,39 @@ html, body {
     border: 1px solid dodgerblue;
     padding: 0.5rem;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-item {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .mtn-banner, .img-img {
+    position: relative;
+    bottom: 1rem;
+    padding: 1rem;
+    width: 100vw;
+}
+
+footer .img-text {
+    text-align: center;
+    margin: 1rem;
+    color: dodgerblue;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+footer .mobile-money-logos {
+    display: flex;
+    justify-content: center;
+}
+
+footer .mm-logo {
+    width: 100px;
+    height: 100px;
+}

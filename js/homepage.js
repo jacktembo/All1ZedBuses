@@ -11,7 +11,6 @@ fetch('https://buses.pridezm.com/api/bus-companies', {
 .then(res => res.json())   
 
 
-
 .then(data => {
     response = data;
     console.log(response)
@@ -26,10 +25,12 @@ fetch('https://buses.pridezm.com/api/bus-companies', {
         </div>
       </div>
         </a>
-        
         `
         companyList.appendChild(item);
     });
 })
 .catch(error => console.error(error))
 
+let footer = document.querySelector('footer')
+companyList.after(footer)
+footer.style.display = 'block'
