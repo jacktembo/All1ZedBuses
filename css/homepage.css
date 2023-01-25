@@ -44,10 +44,12 @@ html, body {
 .choose-text {
     text-align: center;
     margin: 1rem;
-    color: dodgerblue;
+    color: white;
     font-weight: bold;
     border: 1px solid dodgerblue;
     padding: 0.5rem;
+    background-color: rgb(210, 27, 124);
+
 }
 
 footer {
