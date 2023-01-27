@@ -1,0 +1,36 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(231, 226, 226);
+}
+
+.banner-img {
+    width: 95vw;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+    border-bottom: 2px solid rgb(166, 172, 185);
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+label {
+    display: block;
+}
+
+.find-bus {
+    display: block;
+}
+
+.the-form {
+    display: flex;
+    justify-content: center;
+}
+
