@@ -35,6 +35,7 @@ fetch(`https://buses.pridezm.com/api/routes?bus-company=${company_id}`, {
       townSelect.add(option);
     });
 
+
     //   .catch((err) => console.log(err))
   });
 
@@ -42,6 +43,11 @@ townSelect.addEventListener("change", function () {
   while (destinationSelect.options.length) {
     destinationSelect.remove(0);
   }
+  let emptyOption = document.createElement('option')
+  emptyOption.innerHTML = 'Chooose Destination'
+  emptyOption.selected = true;
+  emptyOption.disabled  = true;
+  destinationSelect.add(emptyOption)
   console.log(townSelect.value);
   let selectedValue = townSelect.value;
   fetch(
