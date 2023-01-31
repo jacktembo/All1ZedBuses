@@ -15,24 +15,28 @@
       <h1>Book Your <span class="company-name"></span> Ticket</h1>
       <div class="the-form">
         <form action="" class="journey" method="post">
-          <div class="input-item">
-            <label for="starting-place">From</label>
-            <input type="text" name="starting-place" id="starting-place" />
-          </div>
-          <div class="input-item">
-            <label for="destination">To</label>
-            <input type="text" name="destination" id="destination" />
+          <div class="from-to">
+            <div class="input-item">
+              <label for="starting-place">From</label>
+              <select name="starting-place" id="starting-place" class="starting-place">
+                
+              </select>
+            </div>
+            <div class="input-item">
+              <label for="destination">To</label>
+              <select name="destination" id="destination" class="destination">To</select>
+            </div>
           </div>
           <div class="input-item">
             <label for="departure-date">Departure Date</label>
-            <input type="text" name="departure-date" id="departure-date" />
+            <input type="date" name="departure-date" id="departure-date" />
           </div>
+
           <div class="submit">
             <button type="submit" class="find-bus">Find Bus</button>
           </div>
         </form>
       </div>
-      <select name="" id=""></select>
     </main>
     <script src="js/ticket_details.js"></script>
   </body>

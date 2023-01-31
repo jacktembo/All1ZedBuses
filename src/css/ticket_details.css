@@ -34,3 +34,6 @@ label {
     justify-content: center;
 }
 
+.from-to {
+    display: flex;
+}
