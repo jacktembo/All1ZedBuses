@@ -2,6 +2,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     background-color: rgb(231, 226, 226);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .banner-img {
@@ -51,9 +52,11 @@ label {
     width: 10rem;
     height: 50px;
     border-radius: 20px;
-    background-color: #ccc;
+    background-color: rgb(205, 65, 140);
     overflow: hidden;
     margin: 0.5rem;
+    color: white;
+    font-weight: bold;
   }
   
   .cylinder-select select {
@@ -94,4 +97,20 @@ label {
     display: flex;
     justify-content: center;
     margin: 1rem;
+}
+
+.departure-date {
+    background-color: rgb(205, 65, 140) !important;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.date-select {
+    width: 15rem !important;
+}
+
+.select-date {
+    display: flex;
+    justify-content: center;
 }
