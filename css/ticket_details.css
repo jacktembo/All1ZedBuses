@@ -99,6 +99,7 @@ label {
     margin: 1rem;
 }
 
+
 .departure-date {
     background-color: rgb(205, 65, 140) !important;
     color: white;
@@ -113,4 +114,8 @@ label {
 .select-date {
     display: flex;
     justify-content: center;
+}
+
+.find-bus {
+    width: 10rem;
 }

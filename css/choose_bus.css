@@ -1,0 +1,43 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(231, 226, 226);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner-img {
+    width: 95vw;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 120% !important;
+    border-bottom: 2px solid rgb(166, 172, 185);
+    padding: 1rem;
+    margin: 0 1rem;
+    color: dodgerblue;
+    font-weight: bold;
+    font-weight: bold !important;
+}
+
+.bus-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 120%;
+}

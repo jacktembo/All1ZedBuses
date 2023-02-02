@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/ticket_details.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Ticket Details</title>
-  </head>
-  <body>
-    <div class="banner-section">
-      <img src="" alt="logo" class="banner-img" />
-    </div>
-    <main>
-      <h1>Book Your <span class="company-name"></span> Ticket</h1>
-      <div class="the-form">
-        <form class="journey" method="">
-          <div class="from-to">
-            <div class="input-item">
-              <label for="starting-place">From</label>
-              <select name="starting-place" id="starting-place" class="starting-place cylinder-select" required>
-                <option value="" selected disabled>Choose...</option>
-              </select>
-            </div>
-            <div class="input-item">
-              <label for="destination">To</label>
-              <select name="destination" id="destination" class="destination cylinder-select" required>
-                <option value="" selected disabled>Choose...</option>
-              </select>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/ticket_details.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Ticket Details</title>
+</head>
+
+<body>
+  <div class="banner-section">
+    <img src="" alt="logo" class="banner-img" />
+  </div>
+  <main>
+    <h1>Book Your <span class="company-name"></span> Ticket</h1>
+    <div class="the-form">
+      <form class="journey" method="">
+        <div class="from-to">
+          <div class="input-item">
+            <label for="starting-place">From</label>
+            <select name="starting-place" id="starting-place" class="starting-place cylinder-select" required>
+              <option value="" selected disabled>Choose...</option>
+            </select>
           </div>
           <div class="input-item">
-            <label for="departure-date">Departure Date</label>
-            <div class="select-date"><input type="date" placeholder="" name="departure-date" id="departure-date" class="focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block leading-normal departure-date date-select" required/></div>
+            <label for="destination">To</label>
+            <select name="destination" id="destination" class="destination cylinder-select" required>
+              <option value="" selected disabled>Choose...</option>
+            </select>
           </div>
+        </div>
+        <div class="input-item">
+          <label for="departure-date">Departure Date</label>
+          <div class="select-date"><input type="date" placeholder="" name="departure-date" id="departure-date"
+              class="focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block leading-normal departure-date date-select"
+              required /></div>
+        </div>
 
-          <div class="submit">
-            <button type="submit" class="find-bus bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Find Bus</button>
-          </div>
-        </form>
-      </div>
-    </main>
-    <script src="js/ticket_details.js"></script>
-  </body>
+        <div class="submit">
+          <button type="submit"
+            class="find-bus bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Find Bus</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="js/ticket_details.js"></script>
+</body>
+
 </html>

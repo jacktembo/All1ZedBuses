@@ -77,3 +77,19 @@ townSelect.addEventListener("change", function () {
       });
     });
 });
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const departureTown = formData.get("starting-place");
+  const destination = formData.get("destination");
+  const departureDate = formData.get('departure-date')
+  sessionStorage.setItem('departureTown', departureTown)
+  sessionStorage.setItem('destination', destination)
+  sessionStorage.setItem('departureDate', departureDate)
+  document.location = '../choose_bus.html'
+
+});
