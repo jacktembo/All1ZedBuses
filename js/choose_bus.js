@@ -8,7 +8,7 @@ let company_id = sessionStorage.getItem('company_id')
 let banner_img = document.querySelector('.banner-img')
 banner_img.src = company_image_url
 
-fetch(`https://buses.pridezm.com/api/routes?bus-company=${company_id}&startin_place=${startingPlace}&destination=${destination}`, {
+fetch(`https://buses.pridezm.com/api/routes?bus-company=${company_id}&starting_place=${startingPlace}&destination=${destination}`, {
   method: "GET",
   headers: {
     Authorization: `Token ${token}`,
