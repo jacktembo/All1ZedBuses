@@ -40,4 +40,15 @@ h1 {
     background-color: dodgerblue;
     font-weight: bold;
     font-size: 120%;
+    border-radius: 1rem;
+}
+
+.starting-destination {
+    border: 1px solid rgb(221, 41, 71);
+    padding: 1rem;
+}
+
+.time-price {
+    border: 1px solid rgb(221, 41, 71);
+    padding: 1rem;
 }
