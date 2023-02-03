@@ -44,11 +44,11 @@ h1 {
 }
 
 .starting-destination {
-    border: 1px solid rgb(221, 41, 71);
+    border: 1px solid white;
     padding: 1rem;
 }
 
 .time-price {
-    border: 1px solid rgb(221, 41, 71);
+    border: 1px solid white;
     padding: 1rem;
 }
