@@ -25,3 +25,7 @@ input, select {
 .btn-pay {
     background-color: orangered;
 }
+
+option {
+    font-weight: bold;
+}
