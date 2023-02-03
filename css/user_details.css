@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    color: dodgerblue;
+    margin: 1rem;
+    border: 1px solid dodgerblue;
+}
+
+label {
+    text-align: center;
+}
+
+.details-form {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+input {
+    padding: 5rem;
+}

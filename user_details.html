@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/user_details.css" />
+    <title>User Ticket Details</title>
+  </head>
+
+  <body>
+    <h1>Enter Your Ticket Details Below</h1>
+    <div class="details-form">
+      <form action="">
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2" for="first-name">
+            First Name
+          </label>
+          <div class="relative">
+            <span
+              class="fa fa-user absolute top-0 left-0 mt-3 ml-3 text-gray-500"
+            ></span>
+            <input
+              class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
+              id="first-name"
+              type="text"
+              placeholder="Enter your first name"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2" for="last-name">
+            Last Name
+          </label>
+          <div class="relative">
+            <span
+              class="fa fa-user absolute top-0 left-0 mt-3 ml-3 text-gray-500"
+            ></span>
+            <input
+              class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
+              id="last-name"
+              type="text"
+              placeholder="Enter your last name"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label
+            class="block text-gray-700 font-medium mb-2"
+            for="phone-number"
+          >
+            Phone Number
+          </label>
+          <div class="relative">
+            <span
+              class="fa fa-phone absolute top-0 left-0 mt-3 ml-3 text-gray-500"
+            ></span>
+            <input
+              class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
+              id="phone-number"
+              type="tel"
+              placeholder="Enter your phone number"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2" for="seat-number">
+            Seat Number
+          </label>
+          <div class="relative">
+            <span
+              class="fa fa-ticket-alt absolute top-0 left-0 mt-3 ml-3 text-gray-500"
+            ></span>
+            <select
+              class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
+              id="seat-number"
+            >
+              <option value="">Select a seat</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2" for="seat-number">
+            Choose Insurance Type
+          </label>
+          <div class="relative">
+            <span
+              class="fa fa-ticket-alt absolute top-0 left-0 mt-3 ml-3 text-gray-500"
+            ></span>
+            <select
+              class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
+              id="seat-number"
+            >
+              <option value="">Choose Insurance Type</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-6 text-center">
+          <button
+            class="bg-indigo-500 text-white py-3 px-5 rounded-lg hover:bg-indigo-600"
+            type="submit"
+          >
+            Make Payment Now
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/user_details.js"></script>
+  </body>
+</html>

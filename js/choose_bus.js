@@ -21,7 +21,7 @@ fetch(`https://buses.pridezm.com/api/routes?bus-company=${company_id}&starting_p
     arr.forEach((bus) => {
       const option = document.createElement("div");
       option.classList.add('bus-item')
-      option.innerHTML = `<a class="btn btn-primary" href="" role="button"><div class="starting-destination">${bus.starting_place} --> ${bus.destination}</div> <div class="time-price">${bus.time} hrs - ZMW${bus.price}</div></a>      `
+      option.innerHTML = `<a class="btn btn-primary" href="../user_details.html" role="button"><div class="starting-destination">${bus.starting_place} --> ${bus.destination}</div> <div class="time-price">${bus.time} hrs - ZMW${bus.price}</div></a>      `
       selectBus.append(option);
       
     });
