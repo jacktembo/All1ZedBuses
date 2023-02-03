@@ -43,9 +43,11 @@ async function getInsuranceStatus() {
   );
   const insuranceStatus = await response.json();
   sessionStorage.setItem('insuranceStatus', insuranceStatus)
+  return insuranceStatus
 }
 
 getInsuranceStatus()
+
 
 
 async function getInsuranceTypes() {
@@ -72,4 +74,4 @@ async function getInsuranceTypes() {
   })
 }
 
-getInsuranceTypes()
+setTimeout(getInsuranceTypes, 3000)
