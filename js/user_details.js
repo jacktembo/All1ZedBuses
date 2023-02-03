@@ -50,7 +50,7 @@ getInsuranceStatus()
 
 async function getInsuranceTypes() {
   const response = await fetch(
-    `https://buses.pridezm.com/api/insurance-types`,
+    `https://buses.pridezm.com/api/insurance-types?insurance-status=${sessionStorage.getItem('insuranceStatus')}`,
     {
       headers: {
         Authorization: `Token ${token}`,
