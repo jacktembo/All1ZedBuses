@@ -18,6 +18,10 @@ label {
 }
 
 input, select {
-    padding: 5rem;
-    border: 1px solid rgb(227, 111, 130) !important;
+    padding: 1rem;
+    border: 1px solid dodgerblue !important;
+}
+
+.btn-pay {
+    background-color: orangered;
 }
