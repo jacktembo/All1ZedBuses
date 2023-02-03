@@ -31,3 +31,45 @@ async function getSeats() {
 }
 
 getSeats();
+
+async function getInsuranceStatus() {
+  const response = await fetch(
+    `https://buses.pridezm.com/api/insurance-status?bus-company=${company_id}`,
+    {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    }
+  );
+  const insuranceStatus = await response.json();
+  sessionStorage.setItem('insuranceStatus', insuranceStatus)
+}
+
+getInsuranceStatus()
+
+
+async function getInsuranceTypes() {
+  const response = await fetch(
+    `https://buses.pridezm.com/api/insurance-types`,
+    {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    }
+  );
+  const insuranceTypes = await response.json();
+  sessionStorage.setItem('insuranceTypes', insuranceTypes)
+  let insuranceSelect = document.querySelector('.insurance-select')
+  insuranceTypes.forEach((insuranceType) => {
+    let option = document.createElement('option')
+    option.value = insuranceType.id
+    option.text = `ZMW${insuranceType.cost} - ZMW${insuranceType.return_value} - ${insuranceType.name}`
+    // let insuranceStatus = sessionStorage.getItem('insuranceStatus')
+    // if (insuranceStatus == 'Mandatory') {
+      
+    // }
+    insuranceSelect.appendChild(option)
+  })
+}
+
+getInsuranceTypes()
