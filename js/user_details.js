@@ -74,4 +74,24 @@ async function getInsuranceTypes() {
   })
 }
 
-setTimeout(getInsuranceTypes, 3000)
+setTimeout(getInsuranceTypes, 500)
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const firstName = formData.get("first-name");
+  const lastName = formData.get("last-name");
+  const phoneNumber = formData.get("phone-number")
+  const seatNumber = formData.get("seat-number")
+  const insuranceType = formData.get("insurance-type")
+  sessionStorage.setItem('firstName', firstName)
+  sessionStorage.setItem('lastName', lastName)
+  sessionStorage.setItem('phoneNumber', phoneNumber)
+  sessionStorage.setItem('seatNumber', seatNumber)
+  sessionStorage.setItem('insuranceType', insuranceType)
+  document.location = '../confirm_payment.html'
+
+});

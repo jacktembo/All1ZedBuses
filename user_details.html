@@ -13,7 +13,7 @@
   <body>
     <h1>Enter Your Ticket Details Below</h1>
     <div class="details-form">
-      <form action="">
+      <form action="" method="post">
         <div class="mb-6">
           <label class="block text-gray-700 font-medium mb-2" for="first-name">
             First Name
@@ -26,7 +26,7 @@
               class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
               id="first-name"
               type="text"
-              placeholder="Enter your first name"
+              placeholder="Enter your first name" name="first-name" required
             />
           </div>
         </div>
@@ -42,7 +42,7 @@
               class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
               id="last-name"
               type="text"
-              placeholder="Enter your last name"
+              placeholder="Enter your last name" name="last-name" required
             />
           </div>
         </div>
@@ -61,7 +61,7 @@
               class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500"
               id="phone-number"
               type="tel"
-              placeholder="Enter your phone number"
+              placeholder="Enter your phone number" name="phone-number" required
             />
           </div>
         </div>
@@ -75,7 +75,7 @@
             ></span>
             <select
               class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500 seat-select"
-              id="seat-number"
+              id="seat-number" name="seat-number" required
             >
               <option value="" selected disabled>Choose Seat</option>
             </select>
@@ -91,7 +91,7 @@
             ></span>
             <select
               class="w-full pl-10 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-indigo-500 insurance-select"
-              id="seat-number"
+              id="seat-number" name="insurance-type" required
             >
               <option value="" selected disabled>Choose Travel  Insurance Type</option>
               <option value="7">No Insurance</option>
