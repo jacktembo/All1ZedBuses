@@ -33,10 +33,10 @@ async function postData(url = '', data = {}) {
     if (response.status && response.reference_number) {
       sessionStorage.setItem('status', response.status);
       sessionStorage.setItem('reference_number', response.reference_number);
-      console.log(response.status)
-      console.log(response.reference_number)
+      sessionStorage.setItem('pendingId', response.pending_id);
     }
   }
   
-  makePayment();
+  // makePayment();
+
   
