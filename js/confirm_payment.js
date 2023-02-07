@@ -38,7 +38,7 @@ async function postData(url = '', data = {}) {
     }
   }
   
-  makePayment();
+  // makePayment();
 
   setInterval(function() {
     if (sessionStorage.getItem('paymentComplete') !== null) {
@@ -49,7 +49,7 @@ async function postData(url = '', data = {}) {
 
 
   const interval = 15000; // 15 seconds
-  const timeout = 120000; // 2 minutes
+  const timeout = 5000; // 2 minutes
   
   async function makeRequest() {
     try {
@@ -67,6 +67,7 @@ async function postData(url = '', data = {}) {
       if (data.status === 'successful') {
         sessionStorage.setItem('paymentComplete', true)
         console.log('Payment successful');
+        document.location = '../payment_status.html'
         clearInterval(intervalId);
       }
     } catch (error) {
@@ -78,5 +79,6 @@ async function postData(url = '', data = {}) {
   setTimeout(() => clearInterval(intervalId), timeout);
   setTimeout(() => {
     document.querySelector('.container').style.display = 'none';
+    document.location = '../payment_failed.html'
   }, timeout)
-  
+
