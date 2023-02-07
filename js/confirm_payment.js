@@ -7,7 +7,7 @@ let routeId = sessionStorage.getItem('routeId')
 let departureDate = sessionStorage.getItem('departureDate')
 let token = "b1136fb60f5b0484cac2827b8642b55b6f2e517a";
 const interval = 15000; // 15 seconds
-const timeout = 60000; // 2 minutes
+const timeout = 60000; // 1 minutes
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
       method: 'POST',
