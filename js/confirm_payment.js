@@ -50,7 +50,7 @@ async function postData(url = '', data = {}) {
 
 
   const interval = 15000; // 15 seconds
-  const timeout = 120000; // 2 minutes
+  const timeout = 60000; // 2 minutes
   
   async function makeRequest() {
     try {
