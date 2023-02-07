@@ -1,0 +1,54 @@
+html, body {
+    overflow-x: hidden;
+    background-color: rgb(231, 226, 226);
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid dodgerblue;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 0.5s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* Page styling */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+
+h1 {
+    text-align: center;
+    color: dodgerblue;
+    padding: 0.5rem;
+    border: 1px solid dodgerblue;
+}
+
+h2 {
+    text-align: center;
+    padding: 0.5rem;
+    color: orangered;
+    font-size: 110%;
+}
+
+h3 {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 110%;
+}
+
+h4 {
+    text-align: center;
+    font-size: 110%;
+    margin: 1rem;
+    color: orangered;
+    font-weight: bold;
+}
