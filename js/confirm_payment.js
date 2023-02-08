@@ -8,17 +8,6 @@ let departureDate = sessionStorage.getItem('departureDate')
 let token = "b1136fb60f5b0484cac2827b8642b55b6f2e517a";
 const interval = 15000; // 15 seconds
 const timeout = 60000; // 1 minutes
-
-  setInterval(function() {
-    if (sessionStorage.getItem('paymentComplete') !== null) {
-      // Hide loader if the value is available
-      document.querySelector('.container').style.display = 'none';
-      document.location = '../payment_status.html'
-    }
-  }, interval);
-
-
- 
   
   async function makeRequest() {
     try {
