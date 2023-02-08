@@ -12,17 +12,96 @@ var departureDate = sessionStorage.getItem('departureDate');
 var token = "b1136fb60f5b0484cac2827b8642b55b6f2e517a";
 var interval = 15000; // 15 seconds
 var timeout = 60000; // 1 minutes
+function postData() {
+  return _postData.apply(this, arguments);
+}
+function _postData() {
+  _postData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var url,
+      data,
+      response,
+      _args = arguments;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          url = _args.length > 0 && _args[0] !== undefined ? _args[0] : '';
+          data = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
+          _context.next = 4;
+          return fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+        case 4:
+          response = _context.sent;
+          _context.next = 7;
+          return response.json();
+        case 7:
+          return _context.abrupt("return", _context.sent);
+        case 8:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _postData.apply(this, arguments);
+}
+function makePayment() {
+  return _makePayment.apply(this, arguments);
+}
+function _makePayment() {
+  _makePayment = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var data, response;
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          data = {
+            "route_id": routeId,
+            "first_name": firstName,
+            "last_name": lastName,
+            "phone_number": phoneNumber,
+            "seat_number": seatNumber,
+            "insurance_type": insuranceType,
+            "departure_date": departureDate
+          };
+          _context2.next = 3;
+          return postData('https://buses.pridezm.com/api/pay', data);
+        case 3:
+          response = _context2.sent;
+          if (response.status && response.reference_number) {
+            sessionStorage.setItem('status', response.status);
+            sessionStorage.setItem('reference_number', response.reference_number);
+            sessionStorage.setItem('pendingId', response.pending_id);
+          }
+        case 5:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return _makePayment.apply(this, arguments);
+}
+makePayment();
+setInterval(function () {
+  if (sessionStorage.getItem('paymentComplete') !== null) {
+    // Hide loader if the value is available
+    document.querySelector('.container').style.display = 'none';
+    document.location = '../payment_status.html';
+  }
+}, interval);
 function makeRequest() {
   return _makeRequest.apply(this, arguments);
 }
 function _makeRequest() {
-  _makeRequest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+  _makeRequest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
     var response, data;
-    return _regeneratorRuntime().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          _context.prev = 0;
-          _context.next = 3;
+          _context3.prev = 0;
+          _context3.next = 3;
           return fetch('https://buses.pridezm.com/api/pay-query', {
             method: 'POST',
             headers: {
@@ -34,11 +113,11 @@ function _makeRequest() {
             })
           });
         case 3:
-          response = _context.sent;
-          _context.next = 6;
+          response = _context3.sent;
+          _context3.next = 6;
           return response.json();
         case 6:
-          data = _context.sent;
+          data = _context3.sent;
           console.log(data);
           if (data.status === 'successful') {
             sessionStorage.setItem('paymentComplete', true);
@@ -46,17 +125,17 @@ function _makeRequest() {
             document.location = '../payment_status.html';
             clearInterval(intervalId);
           }
-          _context.next = 14;
+          _context3.next = 14;
           break;
         case 11:
-          _context.prev = 11;
-          _context.t0 = _context["catch"](0);
-          console.error(_context.t0);
+          _context3.prev = 11;
+          _context3.t0 = _context3["catch"](0);
+          console.error(_context3.t0);
         case 14:
         case "end":
-          return _context.stop();
+          return _context3.stop();
       }
-    }, _callee, null, [[0, 11]]);
+    }, _callee3, null, [[0, 11]]);
   }));
   return _makeRequest.apply(this, arguments);
 }

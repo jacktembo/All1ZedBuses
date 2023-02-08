@@ -4,7 +4,7 @@ let companyList = document.querySelector(".companies-cards");
 let baseURL = "https://buses.pridezm.com/api/"
 fetch(`${baseURL}bus-companies`, {
   method: "GET",
-  headers: {
+  headers: {     
     Authorization: `Token ${token}`,
   },
 })
@@ -115,7 +115,7 @@ fetch(`${baseURL}bus-companies`, {
 
 
 
-      
+
     });
   })
   .catch((error) => console.error(error));
