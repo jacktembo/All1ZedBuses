@@ -41,13 +41,13 @@ async function postData(url = '', data = {}) {
   
   makePayment();
 
-  setInterval(function() {
-    if (sessionStorage.getItem('paymentComplete') !== null) {
-      // Hide loader if the value is available
-      document.querySelector('.container').style.display = 'none';
-      document.location = '../payment_status.html'
-    }
-  }, interval);
+  // setInterval(function() {
+  //   if (sessionStorage.getItem('paymentComplete') !== null) {
+  //     // Hide loader if the value is available
+  //     document.querySelector('.container').style.display = 'none';
+  //     document.location = '../payment_status.html'
+  //   }
+  // }, interval);
 
 
  
