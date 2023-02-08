@@ -12,7 +12,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <title>Ticket Details</title>
 </head>
-
+<style>
+  .back-button {
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-weight: bold;
+    color: green;
+    font-size: 120%;
+  }
+  .arrow-left {
+    display: inline-block;
+    margin-left: 2rem;
+    border: solid green;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+</style>
 <body>
   <div class="banner-section">
     <img src="" alt="logo" class="banner-img" />
@@ -49,6 +72,10 @@
       </form>
     </div>
   </main>
+  <div class="back-button" onclick="window.history.back()">
+    <span class="arrow-left"></span>
+    Back
+  </div>
   <script src="js/dist/ticket_details.js"></script>
 </body>
 
