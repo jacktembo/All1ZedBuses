@@ -35,6 +35,7 @@ html, body {
 .company-name {
     padding: 1rem;
     text-decoration: none;
+    text-align: center !important;
     border-end-end-radius: 1rem;
     border-end-start-radius: 1rem;
     background-color: #3279e4;

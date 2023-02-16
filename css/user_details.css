@@ -37,3 +37,7 @@ input, select {
 option {
     font-weight: bold;
 }
+
+placeholder {
+    text-align: center;
+}
